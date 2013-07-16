@@ -1,0 +1,28 @@
+{
+  "name": "TheVault",
+  "homepage": "http://kacz.me",
+  "author": "John Kaczmarek",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.3.4",
+    "jade": "*",
+    "coffee-script": "~1.6.3",
+    "redis": "~0.8.4",
+    "connect-redis": "~1.4.5",
+    "hiredis": "~0.1.15"
+  },
+  "devDependencies": {
+    "node-dev": "~2.0.1",
+    "mocha": "~1.12.0",
+    "request": "~2.22.0",
+    "libxmljs": "~0.8.1"
+  },
+  "scripts": {
+    "test": "./bin/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

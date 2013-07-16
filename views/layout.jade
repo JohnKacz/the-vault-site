@@ -1,0 +1,11 @@
+doctype 5
+html
+    head
+        title= "TheVault - " + title
+        link(rel='stylesheet', href='/stylesheets/#{style}.css')
+    body
+        #header
+            h1= title
+    
+    block content
+    //- != body
