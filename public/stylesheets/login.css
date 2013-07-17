@@ -68,9 +68,9 @@ body p.flash.error:before {
   content: 'Whoops! ';
 }
 body p.flash.info {
-  background-color: #fff;
-  border-top: 1px solid #8d8d8d;
-  border-bottom: 1px solid #8d8d8d;
+  background-color: #02e559;
+  border-top: 1px solid #00f28d;
+  border-bottom: 1px solid #00f28d;
   color: #010101;
 }
 body p.flash.info:before {
@@ -185,4 +185,7 @@ body form input[type='submit'] {
   border-radius: 1em;
   color: #fff;
   text-shadow: 0 1px 0 #8d8d8d;
+}
+.currentUser {
+  float: right;
 }

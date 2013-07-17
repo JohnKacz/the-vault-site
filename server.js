@@ -11,6 +11,8 @@ var express = require('express'),
     http = require('http'),
     path = require('path');
 
+require('express-namespace');
+
 var app = module.exports = express();
 
 // var sessionStore = new RedisStore({
@@ -39,8 +41,8 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser());
 app.use(express.session({
-    secret: "sessionID123110495861304613098650387452875163405938467582734519248735",
-    store: new RedisStore
+  secret: "sessionID123110495861304613098650387452875163405938467582734519248735",
+  store: new RedisStore
 }));
 app.use(flash());
 app.use(app.router);
@@ -56,10 +58,9 @@ else if ('test' == app.get('env')) {
 // routes
 // app.get('/', routes.index);
 // app.get('/users', user.list);
-console.log(app.session);
 require('./apps/authentication/routes')(app);
-
+require('./apps/admin/routes')(app);
 
 http.createServer(app).listen(app.get('port'), function(){
-console.log("Express server listening on port %s in %s mode", app.settings.port, app.settings.env);
+  console.log("Express server listening on port %s in %s mode", app.settings.port, app.settings.env);
 });

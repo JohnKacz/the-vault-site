@@ -5,7 +5,17 @@ html
         link(rel='stylesheet', href='/stylesheets/#{style}.css')
     body
         #header
+            if user
+                div.currentUser= "User: " + user
             h1= title
-    
-    block content
-    //- != body
+
+        if messages
+            if messages.error
+                each message in messages.error
+                    p.flash(class='error')= message
+                    
+            if messages.info
+                each message in messages.info
+                    p.flash(class='info')= message
+
+        block content
